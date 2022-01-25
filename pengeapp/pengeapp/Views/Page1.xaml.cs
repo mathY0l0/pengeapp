@@ -20,17 +20,17 @@ namespace pengeapp.Views
 
             // Retrieve all the notes from the database, and set them as the
             // data source for the CollectionView.
-            List<Note> notes = await App.Database.GetNotesAsync();
-            Note newNote = new Note();
-            newNote.Text = "Total";
+            List<Note> dbNotes = await App.Database.GetNotesAsync();
+            Note totalNote = new Note();
+            totalNote.Text = "Total";
             float total = 0.0f;
-            foreach (Note note in notes)
+            foreach (Note note in dbNotes)
             {
                 total += note.Value;
             }
-            newNote.Value = total;
-            notes.Add(newNote);
-            collectionView.ItemsSource = notes;
+            totalNote.Value = total;
+            dbNotes.Add(totalNote);
+            collectionView.ItemsSource = dbNotes;
         }
 
 
