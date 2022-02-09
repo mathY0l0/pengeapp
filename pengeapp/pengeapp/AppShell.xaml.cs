@@ -8,7 +8,7 @@ namespace pengeapp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(pengeEntryPage), typeof(pengeEntryPage));
+            Routing.RegisterRoute(nameof(Gæld), typeof(Gæld));
         }
     }
 }

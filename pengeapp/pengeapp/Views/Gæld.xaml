@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pengeapp.Views.Page1"
-             Title="pengeapp">
-
+             x:Class="pengeapp.Views.Gæld"
+             Title="Gæld">
     <ContentPage.Resources>
         <!-- Define a visual state for the Selected state of the CollectionView -->
         <Style TargetType="StackLayout">
@@ -17,13 +16,7 @@
         </Style>
     </ContentPage.Resources>
 
-    <!-- Add an item to the toolbar -->
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Gæld"
-                     Clicked="OnGældClicked" />
-    </ContentPage.ToolbarItems>
 
-    <!-- Display notes in a list -->
     <CollectionView x:Name="collectionView"
                     Margin="{StaticResource PageMargin}">
         <CollectionView.ItemsLayout>

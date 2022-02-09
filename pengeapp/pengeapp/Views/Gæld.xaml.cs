@@ -1,12 +1,18 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using pengeapp.Models;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace pengeapp.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public partial class pengeEntryPage : ContentPage
+    public partial class Gæld : ContentPage
     {
         public string ItemId
         {
@@ -16,7 +22,7 @@ namespace pengeapp.Views
             }
         }
 
-        public pengeEntryPage()
+        public Gæld()
         {
             InitializeComponent();
 
